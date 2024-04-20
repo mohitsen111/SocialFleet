@@ -28,6 +28,7 @@ export const sendOtp = async (email) => {
     <p style="margin-bottom: 20px;">Your OTP for SocialFleet verification is:</p>
     <p style="font-size: 24px; font-weight: bold; text-align: center; margin-bottom: 20px;">${otp}</p>
     <p style="margin-bottom: 20px;">Please use this OTP to complete the verification process.</p>
+    <p style="margin-bottom: 20px;">Kindly note that this OTP is valid for a duration of 5 minutes.</p>
     <p style="margin-bottom: 20px;">If you didn't request this OTP, please ignore this email.</p>
     <p style="margin-bottom: 20px;">Thank you!</p>`,
   };
