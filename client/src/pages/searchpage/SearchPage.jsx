@@ -10,6 +10,7 @@ import profilePic from "../../assets/profilePic.png";
 import FollowBtn from "../../components/follow/FollowBtn";
 import { useLocation, useParams } from "react-router-dom";
 import Posts from "../../components/posts/Posts";
+import Img from "../../components/Img";
 const SearchPage = () => {
   const { currentUser } = useContext(AuthContext);
   const { username } = useParams();

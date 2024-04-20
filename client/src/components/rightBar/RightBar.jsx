@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import useMakeRequest from "../../hook/useFetch";
 import "./rightBar.scss";
 import profilePic from "../../assets/profilePic.png";
@@ -49,8 +50,9 @@ const RightBar = () => {
                   return "";
                 }
                 return (
-                  <li key={index} className="list-item">
+                    <li key={index} className="list-item">
                     <div className="user">
+                    <Link to={`/profile/${friend.username}`}>
                       <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
@@ -66,6 +68,7 @@ const RightBar = () => {
                           &#40;{friend.username}&#41;
                         </span> */}
                       </div>
+                      </Link>
                       <div className="buttons">
                         <FollowBtn
                           relationshipData={relationshipData}

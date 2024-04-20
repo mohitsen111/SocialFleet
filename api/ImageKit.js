@@ -23,8 +23,8 @@ export const uploadImageToCDN = async (image) => {
     image.buffer = fs.readFileSync(image.path);
 
     const response = await imagekit.upload({
-      file: image.buffer, //required
-      fileName: image.originalname, //required
+      file: image.buffer, 
+      fileName: image.originalname, 
     });
     fs.unlinkSync(image.path);
     return response;

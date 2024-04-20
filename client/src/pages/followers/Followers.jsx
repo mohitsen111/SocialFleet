@@ -10,6 +10,7 @@ import profilePic from "../../assets/profilePic.png";
 import FollowBtn from "../../components/follow/FollowBtn";
 import Posts from "../../components/posts/Posts";
 import Img from "../../components/Img";
+import { Link } from "react-router-dom";
 const Followers = () => {
   const { darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
@@ -74,6 +75,7 @@ const Followers = () => {
                     return (
                       <li key={index} className="list-item">
                         <div className="user">
+                        <Link to={`/profile/${friend.followerUsername}`}>
                           <div className="userInfo">
                             <Img
                               isDefault={friend.profilePic ? false : true}
@@ -89,6 +91,7 @@ const Followers = () => {
                               &#40;{friend.followerUsername}&#41;
                             </span>
                           </div>
+                          </Link>
                           <div className="buttons">
                             <FollowBtn
                               relationshipData={relationshipData}
@@ -114,7 +117,8 @@ const Followers = () => {
                 return (
                   <li key={index} className="list-item">
                     <div className="user">
-                      <div className="userInfo">
+                     <Link to={`/profile/${friend.followerUsername}`}>
+                     <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
                           src={
@@ -127,6 +131,7 @@ const Followers = () => {
                           &#40;{friend.followerUsername}&#41;
                         </span>
                       </div>
+                     </Link>
                       <div className="buttons">
                         <FollowBtn
                           relationshipData={relationshipData}

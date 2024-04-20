@@ -10,6 +10,8 @@ import profilePic from "../../assets/profilePic.png";
 import FollowBtn from "../../components/follow/FollowBtn";
 import Posts from "../../components/posts/Posts";
 import Img from "../../components/Img";
+import { LinearProgress } from "@mui/material";
+import { Link } from "react-router-dom";
 const Following = () => {
   const { darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
@@ -74,6 +76,7 @@ const Following = () => {
                     return (
                       <li key={index} className="list-item">
                         <div className="user">
+                          <Link to={`/profile/${friend.followedUsername}`}>
                           <div className="userInfo">
                             <Img
                               isDefault={friend.profilePic ? false : true}
@@ -89,6 +92,7 @@ const Following = () => {
                               &#40;{friend.followedUsername}&#41;
                             </span>
                           </div>
+                          </Link>
                           <div className="buttons">
                             <FollowBtn
                               relationshipData={relationshipData}
@@ -114,6 +118,7 @@ const Following = () => {
                 return (
                   <li key={friend.followedUsername} className="list-item">
                     <div className="user">
+                      <Link to={`/profile/${friend.followedUsername}`}>
                       <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
@@ -129,6 +134,7 @@ const Following = () => {
                           &#40;{friend.followedUsername}&#41;
                         </span>
                       </div>
+                      </Link>
                       <div className="buttons">
                         <FollowBtn
                           relationshipData={relationshipData}
