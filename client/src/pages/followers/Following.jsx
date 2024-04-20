@@ -82,7 +82,7 @@ const Following = () => {
                               isDefault={friend.profilePic ? false : true}
                               src={
                                 friend.profilePic
-                                  ? "/upload/" + friend.profilePic
+                                  ? friend.profilePic
                                   : profilePic
                               }
                               alt="Image"
@@ -124,7 +124,7 @@ const Following = () => {
                           isDefault={friend.profilePic ? false : true}
                           src={
                             friend.profilePic
-                              ? "/upload/" + friend.profilePic
+                              ? friend.profilePic
                               : profilePic
                           }
                           alt="Image"
