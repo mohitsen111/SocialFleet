@@ -25,11 +25,7 @@ const Navbar = () => {
             className="nav__search--input"
           />
           <button
-            onClick={() => {
-              if (searchRef.current.value) {
-                navigate(`/search/${searchRef.current.value}`);
-              }
-            }}
+           
             className="nav__search--btn"
           >
             <SearchIcon />

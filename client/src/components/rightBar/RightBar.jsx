@@ -62,7 +62,7 @@ const RightBar = () => {
                           alt="Image"
                         />
                         <span className="name">
-                          {friend.name} &#40;{friend.username}&#41;
+                          {friend.name}
                         </span>
                         {/* <span className="username">
                           &#40;{friend.username}&#41;
