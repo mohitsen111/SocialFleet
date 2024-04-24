@@ -133,6 +133,39 @@ const Stories = () => {
                   onChange={(e) => handleUpload(e)}
                 />
               </div>
+            ) : data.length > 1 &&
+              index === 0 &&
+              story.username !== currentUser.username ? (
+              <>
+                <div key={"index"} style={{ position: "relative" }}>
+                  <Story
+                    imgSrc={currentUser.profilePic}
+                    username={"Your Stories"}
+                    onClick={() => ""}
+                  />
+                  <label className="uploadIcon" htmlFor="media">
+                    +
+                  </label>
+                  <input
+                    type="file"
+                    style={{ display: "none" }}
+                    name="media"
+                    id="media"
+                    onChange={(e) => handleUpload(e)}
+                  />
+                </div>
+                <div>
+                  <Story
+                    key={"uniqe"}
+                    imgSrc={story.profilePic}
+                    username={story.username}
+                    onClick={() => {
+                      setIntialStory(index);
+                      setOpenStories(true);
+                    }}
+                  />
+                </div>
+              </>
             ) : (
               <div key={index}>
                 <Story
