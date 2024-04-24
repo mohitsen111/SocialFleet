@@ -76,7 +76,7 @@ const Following = () => {
                     return (
                       <li key={index} className="list-item">
                         <div className="user">
-                          <Link to={`/profile/${friend.followedUsername}`}>
+                          <Link  to={`/profile/${friend.followedUsername}`}>
                           <div className="userInfo">
                             <Img
                               isDefault={friend.profilePic ? false : true}
@@ -118,7 +118,8 @@ const Following = () => {
                 return (
                   <li key={friend.followedUsername} className="list-item">
                     <div className="user">
-                      <Link to={`/profile/${friend.followedUsername}`}>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`/profile/${friend.followedUsername}`}>
+
                       <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
@@ -131,7 +132,7 @@ const Following = () => {
                         />
                         <span className="name">{friend.name}</span>
                         <span className="username">
-                          &#40;{friend.followedUsername}&#41;
+                        
                         </span>
                       </div>
                       </Link>

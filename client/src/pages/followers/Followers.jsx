@@ -117,7 +117,7 @@ const Followers = () => {
                 return (
                   <li key={index} className="list-item">
                     <div className="user">
-                     <Link to={`/profile/${friend.followerUsername}`}>
+                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`/profile/${friend.followerUsername}`}>
                      <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
@@ -128,12 +128,13 @@ const Followers = () => {
                         />
                         <span className="name">{friend.name}</span>
                         <span className="username">
-                          &#40;{friend.followerUsername}&#41;
+                         
                         </span>
                       </div>
                      </Link>
-                      <div className="buttons">
-                        <FollowBtn
+                     <div className="buttons">
+
+                        <FollowBtn 
                           relationshipData={relationshipData}
                           username={friend.followerUsername}
                         />
