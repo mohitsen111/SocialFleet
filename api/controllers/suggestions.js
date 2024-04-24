@@ -1,7 +1,7 @@
 import { db } from "../connect.js";
 
 export const getSuggestions = (req, res) => {
-  const q = "SELECT * FROM users ORDER BY RAND() LIMIT 20";
+  const q = "SELECT * FROM users ORDER BY RAND() LIMIT 10";
 
   db.query(q, (err, results) => {
     if (err) {

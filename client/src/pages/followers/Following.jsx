@@ -119,8 +119,7 @@ const Following = () => {
                   <li key={friend.followedUsername} className="list-item">
                     <div className="user">
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`/profile/${friend.followedUsername}`}>
-
-                      <div className="userInfo">
+                       <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
                           src={
