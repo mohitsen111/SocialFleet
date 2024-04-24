@@ -85,6 +85,8 @@
               padding: 5px;
               color: white;
               cursor: pointer;
+              border-radius: 4px;
+              transition: background-color 0.3s ease;
 
               &:first-child {
                 background-color: #5271ff;
@@ -92,6 +94,9 @@
 
               &:last-child {
                 background-color: #f0544f;
+              }
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
               }
             }
           }

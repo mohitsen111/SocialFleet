@@ -52,7 +52,7 @@ const RightBar = () => {
                 return (
                     <li key={index} className="list-item">
                     <div className="user">
-                    <Link to={`/profile/${friend.username}`}>
+                    <Link style={{ textDecoration: 'none' }} to={`/profile/${friend.username}`}>
                       <div className="userInfo">
                         <Img
                           isDefault={friend.profilePic ? false : true}
